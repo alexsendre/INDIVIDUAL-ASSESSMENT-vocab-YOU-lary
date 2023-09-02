@@ -5,12 +5,11 @@ import '../styles/main.scss';
 
 const init = () => {
   document.querySelector('#app').innerHTML = `
-    <h1>HELLO! You are up and running!</h1>
-    <small>Open your dev tools</small><br />
-    <button class="btn btn-danger" id="click-me">Click ME!</button><br />
-    <hr />
-    <h2>These are font awesome icons:</h2>
-    <i class="fas fa-user fa-4x"></i> <i class="fab fa-github-square fa-5x"></i>
+    <div class='text-center'>
+      <h1 class='mb-5'>vocab-you-lary</h1>
+      <h3 class='mb-5'>Welcome!</h3>
+      <button class="btn btn-danger" id="click-me">Sign In</button>
+    </div>
   `;
   console.warn('YOU ARE UP AND RUNNING!');
 
