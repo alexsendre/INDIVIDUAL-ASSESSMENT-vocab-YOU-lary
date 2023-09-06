@@ -9,7 +9,7 @@ const emptyCards = () => {
 const showCards = (array) => {
   clearDom();
 
-  const btn = '<button class="btn btn-success btn-lg" id="add-vocab-card-btn">Add a Term</button>';
+  const btn = '<button class="btn btn-success btn-lg" id="add-term-btn">Add a Term</button>';
 
   renderToDom('#add-btn', btn);
 
