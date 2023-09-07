@@ -31,4 +31,44 @@ const createTerm = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getCards, createTerm };
+const updateTerm = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabCards/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload)
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+const deleteTerm = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabCards/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+const getSingleTerm = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabCards/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export {
+  getCards,
+  createTerm,
+  updateTerm,
+  deleteTerm,
+  getSingleTerm
+};
