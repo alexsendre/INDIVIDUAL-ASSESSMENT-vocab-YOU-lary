@@ -10,13 +10,13 @@ const navBar = () => {
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#" id="create-term">Create Term</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#" id="view-all">View Terms</a>
           </li>
-          </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="create-entry">Create Entry</a>
+          </li>
+        </ul>
         <span class="navbar-text">
           <div id="logout-btn-nav"></div>
         </span>

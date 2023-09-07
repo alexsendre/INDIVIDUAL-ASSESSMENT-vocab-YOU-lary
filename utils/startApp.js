@@ -8,12 +8,12 @@ import navEvents from '../events/navEvents';
 import { showCards } from '../pages/vocabCards';
 
 const startApp = (user) => {
-  domBuilder(user); // BUILDS DOM
+  domBuilder(); // BUILDS DOM
   domEvents(user); // ADDS EVENT LISTENERS TO DOM
   formEvents(user); // CAPTURES VALUES FROM FORM
   navBar(); // DYNAMICALLY CREATES NAVBAR
-  logoutButton();
   navEvents(user); // ADDS LOGOUT COMPONENT
+  logoutButton(); // DYNAMICALLY RENDERS LOGOUT BUTTON IF LOGGED IN
 
   getCards(user.uid).then((cards) => showCards(cards));
 };
