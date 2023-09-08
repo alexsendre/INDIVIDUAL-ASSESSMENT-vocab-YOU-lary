@@ -16,6 +16,12 @@ const navBar = () => {
           <li class="nav-item">
             <a class="nav-link" href="#" id="create-entry">Create Entry</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="lang-filter">Language Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="tech-filter">Tech Terms</a>
+          </li>
         </ul>
         <span class="navbar-text">
           <div id="logout-btn-nav"></div>

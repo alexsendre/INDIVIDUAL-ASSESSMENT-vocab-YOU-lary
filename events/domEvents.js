@@ -1,5 +1,5 @@
 import {
-  deleteTerm, getCards, getLangTerms, getSingleTerm, getTechTerms
+  deleteTerm, getCards, getSingleTerm
 } from '../api/cardData';
 import addCardForm from '../components/forms/addCardForm';
 import { emptyCards, showCards } from '../pages/vocabCards';
@@ -30,14 +30,6 @@ const domEvents = (user) => {
     if (e.target.id.includes('edit-card')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleTerm(firebaseKey).then((cardObj) => addCardForm(user.uid, cardObj));
-    }
-
-    if (e.target.id.includes('filterLang')) {
-      getLangTerms().then(showCards);
-    }
-
-    if (e.target.id.includes('filterTech')) {
-      getTechTerms().then(showCards);
     }
   });
 };
