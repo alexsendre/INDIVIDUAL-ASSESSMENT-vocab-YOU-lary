@@ -1,12 +1,42 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+$font-stack: 'Inter', sans-serif;
+$body-color: #3c162f;
+$text-color: whitesmoke;
 
 body {
-  background-color: rgb(52, 52, 52);
-  color: brown;
+  background-color: $body-color;
+  color: $text-color;
   text-align: center;
-  // margin-top: 100px;
+  font-family: $font-stack;
+}
+
+#navBar-custom {
+  background-color: #fbf6ff;
+  color: whitesmoke;
+}
+
+.btn-edit,
+.btn-delete {
+  border: 1px solid black;
+}
+
+.btn-edit {
+  background-color: lightgreen;
+}
+
+.btn-delete {
+  background-color: lightcoral;
+}
+
+.btn-edit:hover {
+  background-color: rgb(50, 241, 50);
+}
+
+.btn-delete:hover {
+  background-color: red;
 }
 
 #form-display {
@@ -27,10 +57,15 @@ body {
   width: 18rem;
 }
 
-#filter-buttons {
+#add-term-btn {
   margin-top: 25px;
-  margin-left: 5%;
-  gap: 10px;
-  display: flex;
-  justify-content: flex-start;
+  border: 1px solid white;
+  color: whitesmoke;
+}
+
+#submit-entry-btn {
+  margin-top: 25px;
+  border: 1px solid transparent;
+  color: rgb(21, 21, 21);
+  background-color: rgb(203, 255, 203);
 }

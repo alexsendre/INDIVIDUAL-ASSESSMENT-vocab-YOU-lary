@@ -9,7 +9,7 @@ const emptyCards = () => {
 const showCards = (array) => {
   clearDom();
 
-  const btn = '<button class="btn btn-success btn-lg" id="add-term-btn">Add a Term</button>';
+  const btn = '<button class="btn btn-lg" id="add-term-btn">Add a Term</button>';
 
   renderToDom('#add-btn', btn);
 
@@ -27,8 +27,8 @@ const showCards = (array) => {
             <h6 class="card-subtitle mb-2 text-muted">// ${card.languageOrTech}</h6>
           </span>
           <p class="card-text">${card.description}</p>
-          <i class="btn btn-warning bi bi-pencil-square" id="edit-card--${card.firebaseKey}"></i>
-          <i class="btn btn-danger bi bi-trash" id="delete-card--${card.firebaseKey}"></i>
+          <i class="btn btn-edit bi bi-pencil-square" id="edit-card--${card.firebaseKey}">EDIT</i>
+          <i class="btn btn-delete bi bi-trash" id="delete-card--${card.firebaseKey}">DELETE</i>
         </div>
       </div>
       `;

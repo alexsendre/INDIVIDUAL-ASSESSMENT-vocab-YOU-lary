@@ -26,13 +26,13 @@ const addCardForm = (uid, obj = {}) => {
         </div>
         <div class="form-group mb-2">
           <label for="title" class="mb-2">Description</label>
-          <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="What does this term mean?" value="${obj.description || ''}" required>
+          <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Define your term" value="${obj.description || ''}" required>
         </div>
         <div class="form-check">
           <label class="form-check-label mb-2" for="favorite">Favorite?</label><br>
           <input type="checkbox" class="form-check-input mb-2" id="favorite" ${obj.isFavorite ? 'checked' : ''}>
         </div>
-        <button type="submit" class="btn btn-success mt-3" id="submit-entry">Submit Term</button>
+        <button type="submit" class="btn mt-3" id="submit-entry-btn">Submit Term</button>
       </form>
     </div>`;
 
