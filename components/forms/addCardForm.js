@@ -1,7 +1,8 @@
+import { getSingleTerm } from '../../api/cardData';
 import clearDom from '../../utils/clearDom';
 import renderToDom from '../../utils/renderToDom';
 
-const addCardForm = (obj = {}) => {
+const addCardForm = (uid, obj = {}) => {
   clearDom();
 
   const domString = `
@@ -28,14 +29,15 @@ const addCardForm = (obj = {}) => {
           <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="What does this term mean?" value="${obj.description || ''}" required>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="favorite" ${obj.isFavorite ? 'checked' : ''}>
-          <label class="form-check-label" for="favorite">Favorite?</label>
+          <label class="form-check-label mb-2" for="favorite">Favorite?</label><br>
+          <input type="checkbox" class="form-check-input mb-2" id="favorite" ${obj.isFavorite ? 'checked' : ''}>
         </div>
         <button type="submit" class="btn btn-success mt-3" id="submit-entry">Submit Term</button>
       </form>
     </div>`;
 
   renderToDom('#form-display', domString);
+  getSingleTerm(`${obj.firebaseKey || ''}`, uid);
 };
 
 export default addCardForm;

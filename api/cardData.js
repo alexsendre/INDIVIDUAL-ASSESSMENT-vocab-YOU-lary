@@ -39,7 +39,7 @@ const updateTerm = (payload) => new Promise((resolve, reject) => {
     },
     body: JSON.stringify(payload)
   }).then((response) => response.json())
-    .then(resolve)
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
@@ -61,7 +61,7 @@ const getSingleTerm = (firebaseKey) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json',
     },
   }).then((response) => response.json())
-    .then(resolve)
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
