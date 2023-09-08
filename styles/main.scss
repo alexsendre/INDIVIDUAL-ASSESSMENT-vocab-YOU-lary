@@ -26,3 +26,11 @@ body {
 #customCard {
   width: 18rem;
 }
+
+#filter-buttons {
+  margin-top: 25px;
+  margin-left: 5%;
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+}

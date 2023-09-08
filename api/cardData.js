@@ -65,10 +65,46 @@ const getSingleTerm = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getLangTerms = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabCards.json?orderBy="category"&equalTo="Language"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getTechTerms = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocabCards.json?orderBy="category"&equalTo="Tech"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 export {
   getCards,
   createTerm,
   updateTerm,
   deleteTerm,
-  getSingleTerm
+  getSingleTerm,
+  getLangTerms,
+  getTechTerms
 };
