@@ -1,4 +1,6 @@
-import { deleteTerm, getCards, getSingleTerm } from '../api/cardData';
+import {
+  deleteTerm, getCards, getSingleTerm
+} from '../api/cardData';
 import addCardForm from '../components/forms/addCardForm';
 import { emptyCards, showCards } from '../pages/vocabCards';
 
