@@ -6,10 +6,10 @@ const formEvents = (user) => {
     e.preventDefault();
 
     if (e.target.id.includes('submit-entry')) {
-      console.warn('clicked');
       const payload = {
         title: document.querySelector('#vocabTitle').value,
         languageOrTech: document.querySelector('#langOrTech').value,
+        category: document.querySelector('#term-category').value,
         description: document.querySelector('#description').value,
         favorite: document.querySelector('#favorite').checked,
         uid: user.uid
@@ -29,6 +29,7 @@ const formEvents = (user) => {
       const payload = {
         title: document.querySelector('#vocabTitle').value,
         languageOrTech: document.querySelector('#langOrTech').value,
+        category: document.querySelector('#term-category').value,
         description: document.querySelector('#description').value,
         favorite: document.querySelector('#favorite').checked,
         uid: user.uid,

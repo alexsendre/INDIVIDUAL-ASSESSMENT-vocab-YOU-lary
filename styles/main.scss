@@ -10,8 +10,19 @@ body {
 }
 
 #form-display {
-  width: 60%;
+  width: 20%;
   margin: auto;
   justify-content: center;
   color: white;
+}
+
+#store {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: 33.3333333%;
+}
+
+#customCard {
+  width: 18rem;
 }
