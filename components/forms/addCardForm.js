@@ -1,6 +1,5 @@
 import clearDom from '../../utils/clearDom';
 import renderToDom from '../../utils/renderToDom';
-// import selectCategory from './selectCategory';
 
 const addCardForm = (obj = {}) => {
   clearDom();
