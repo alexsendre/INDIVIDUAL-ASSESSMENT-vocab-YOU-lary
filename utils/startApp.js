@@ -8,7 +8,7 @@ import navEvents from '../events/navEvents';
 import { showCards } from '../pages/vocabCards';
 
 const startApp = (user) => {
-  domBuilder(); // BUILDS DOM
+  domBuilder(user); // BUILDS DOM
   domEvents(user); // ADDS EVENT LISTENERS TO DOM
   formEvents(user); // CAPTURES VALUES FROM FORM
   navBar(); // DYNAMICALLY CREATES NAVBAR
