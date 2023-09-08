@@ -1,6 +1,6 @@
 import { deleteTerm, getCards, getSingleTerm } from '../api/cardData';
 import addCardForm from '../components/forms/addCardForm';
-import { showCards } from '../pages/vocabCards';
+import { emptyCards, showCards } from '../pages/vocabCards';
 
 const domEvents = (user) => {
   document.querySelector('#main-content').addEventListener('click', (e) => {
@@ -11,9 +11,17 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('delete-card')) {
       // eslint-disable-next-line no-alert
-      if (window.confirm('Are you sure you want to delete?')) {
+      if (window.confirm('Delete Term?')) {
         const [, firebaseKey] = e.target.id.split('--');
-        deleteTerm(firebaseKey).then(getCards).then(showCards);
+        deleteTerm(firebaseKey).then(() => {
+          getCards(user.uid).then((cardArr) => {
+            if (cardArr.length) {
+              showCards(cardArr);
+            } else {
+              emptyCards();
+            }
+          });
+        });
       }
     }
 

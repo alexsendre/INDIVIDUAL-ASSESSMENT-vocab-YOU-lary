@@ -19,10 +19,13 @@ const showCards = (array) => {
   } else {
     array.forEach((card) => {
       domString += `
-      <div class="card" style="width: 18rem;">
+      <div class="card" id="customCard">
         <div class="card-body">
-          <h5 class="card-title">${card.title}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Language/Tech: ${card.languageOrTech}</h6>
+          <h5 class="card-title mb-2">${card.title}</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="card-category">${card.category}</h6>
+          <span>
+            <h6 class="card-subtitle mb-2 text-muted">// ${card.languageOrTech}</h6>
+          </span>
           <p class="card-text">${card.description}</p>
           <i class="btn btn-warning bi bi-pencil-square" id="edit-card--${card.firebaseKey}"></i>
           <i class="btn btn-danger bi bi-trash" id="delete-card--${card.firebaseKey}"></i>
