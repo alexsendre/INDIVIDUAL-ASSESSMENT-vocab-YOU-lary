@@ -2,9 +2,10 @@ import renderToDom from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">VOCAB-YOU</a>
+  <div id="navBar-custom">
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid text-white">
+      <a class="navbar-brand" href="#">TERMinal</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -23,12 +24,13 @@ const navBar = () => {
             <a class="nav-link" href="#" id="tech-filter">Tech Terms</a>
           </li>
         </ul>
-        <span class="navbar-text">
+        <span class="navbar-text float-end">
           <div id="logout-btn-nav"></div>
         </span>
       </div>
     </div>
-  </nav>`;
+  </nav>
+  </div>`;
 
   renderToDom('#navBar', domString);
 };

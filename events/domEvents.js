@@ -28,7 +28,6 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('edit-card')) {
-      console.warn('clicked');
       const [, firebaseKey] = e.target.id.split('--');
       getSingleTerm(firebaseKey).then((cardObj) => addCardForm(user.uid, cardObj));
     }
