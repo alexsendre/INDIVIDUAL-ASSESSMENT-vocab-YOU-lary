@@ -26,6 +26,8 @@ const formEvents = (user) => {
           getCards(user.uid).then((cards) => showCards(cards));
         });
       });
+
+      console.error(user.uid);
     }
 
     if (e.target.id.includes('edit-card')) {

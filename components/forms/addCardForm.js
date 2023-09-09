@@ -9,15 +9,15 @@ const addCardForm = (uid, obj = {}) => {
     <div id="create-form">
       <form id="${obj.firebaseKey ? `edit-card--${obj.firebaseKey}` : 'submit-entry'}" class="mt-4">
         <div class="form-group mb-2">
-          <label for="image" class="mb-2">Title</label>
-          <input type="text" class="form-control" id="vocabTitle" placeholder="Async Programming" value="${obj.title || ''}" required>
+          <label for="image" class="mb-2">Title*</label>
+          <input type="text" class="form-control" id="vocabTitle" placeholder="Express.js" value="${obj.title || ''}" required>
         </div>
         <div class="form-group mb-2">
-          <label for="image" class="mb-2">Language/Tech</label>
+          <label for="image" class="mb-2">Attribution*</label>
           <input type="text" class="form-control" id="langOrTech" placeholder="JavaScript" value="${obj.languageOrTech || ''}" required>
         </div>
         <div class="form-group mb-2">
-          <label for="category" class="mb-2">Select Category</label>
+          <label for="category" class="mb-2">Select Category*</label>
           <select class="form-control text-center" id="term-category">
             <option for="select">-- Select --</option>
             <option for="language">Language</option>
@@ -25,11 +25,11 @@ const addCardForm = (uid, obj = {}) => {
           </select>
         </div>
         <div class="form-group mb-2">
-          <label for="title" class="mb-2">Description</label>
+          <label for="title" class="mb-2">Description*</label>
           <input type="text" class="form-control" id="description" aria-describedby="description" placeholder="Define your term" value="${obj.description || ''}" required>
         </div>
         <div class="form-check">
-          <label class="form-check-label mb-2" for="favorite">Favorite?</label><br>
+          <label class="form-check-label mb-2" for="favorite">Favorite?</label>
           <input type="checkbox" class="form-check-input mb-2" id="favorite" ${obj.isFavorite ? 'checked' : ''}>
         </div>
         <button type="submit" class="btn mt-3" id="submit-entry-btn">Submit Term</button>
