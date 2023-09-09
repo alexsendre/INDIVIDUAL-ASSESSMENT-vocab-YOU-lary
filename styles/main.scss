@@ -24,7 +24,7 @@ body {
 }
 
 .btn-edit {
-  background-color: lightgreen;
+  background-color: lightyellow;
 }
 
 .btn-delete {
@@ -32,7 +32,7 @@ body {
 }
 
 .btn-edit:hover {
-  background-color: rgb(50, 241, 50);
+  background-color: rgb(255, 211, 117);
 }
 
 .btn-delete:hover {
@@ -49,12 +49,31 @@ body {
 #store {
   margin-top: 25px;
   display: flex;
-  justify-content: space-evenly;
-  flex-basis: 33.3333333%;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 #customCard {
   width: 18rem;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 33%;
+  margin-top: 25px;
+}
+
+#card-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: end;
+  gap: 7px;
+  margin-top: 9px;
 }
 
 #add-term-btn {

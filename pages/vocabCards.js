@@ -19,16 +19,22 @@ const showCards = (array) => {
   } else {
     array.forEach((card) => {
       domString += `
-      <div class="card" id="customCard">
-        <div class="card-body">
-          <h5 class="card-title mb-2">${card.title}</h5>
-          <h6 class="card-subtitle mb-2 text-muted" id="card-category">${card.category}</h6>
-          <span>
-            <h6 class="card-subtitle mb-2 text-muted">// ${card.languageOrTech}</h6>
-          </span>
-          <p class="card-text">${card.description}</p>
-          <i class="btn btn-edit bi bi-pencil-square" id="edit-card--${card.firebaseKey}">EDIT</i>
-          <i class="btn btn-delete bi bi-trash" id="delete-card--${card.firebaseKey}">DELETE</i>
+      <div id="card-container">
+        <div class="card" id="customCard">
+          <div class="card-body">
+            <h5 class="card-title mb-2">${card.title}</h5>
+            <h6 class="card-subtitle mb-2 text-muted" id="card-category">${card.category}</h6>
+            <span>
+              <h6 class="card-subtitle mb-2 text-muted">// ${card.languageOrTech}</h6>
+            </span>
+            <div id="card-desc">
+              <p class="card-text">${card.description}</p>
+            </div>
+            <div id="card-btns">
+              <i class="btn btn-edit bi bi-pencil-square" id="edit-card--${card.firebaseKey}">EDIT</i>
+              <i class="btn btn-delete bi bi-trash" id="delete-card--${card.firebaseKey}">DELETE</i>
+            </div>
+          </div>
         </div>
       </div>
       `;
